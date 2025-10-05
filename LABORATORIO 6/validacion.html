@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Validación de Usuario</title>
+</head>
+<body>
+  <h1>Formulario de Validación</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+    </ul>
+  </nav>
+
+  <form>
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"><br><br>
+
+    <label for="clave">Contraseña (6–12 caracteres):</label><br>
+    <input type="password" id="clave" name="clave" required 
+           pattern=".{6,12}" placeholder="Entre 6 y 12 caracteres"><br><br>
+
+    <label for="confirmar">Confirmar contraseña:</label><br>
+    <input type="password" id="confirmar" name="confirmar" required placeholder="Repite la contraseña"><br><br>
+
+    <input type="submit" value="Validar">
+  </form>
+</body>
+</html>
+
