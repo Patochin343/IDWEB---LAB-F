@@ -1,0 +1,51 @@
+.encabezado {
+    color:  green;
+    font-size: 32px;
+}
+.parrafo {
+    font-style: italic;
+    font-size: 28px;
+}
+.titulo {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+.marco {
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 15px;
+    background-color: yellow;
+}
+#parrafo {
+    border: 2px solid red;
+    color: blue;
+    font-weight: bold;
+}
+#boton {
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+    padding: 100px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: aqua;
+}
+.shadow {
+  box-shadow: 0 4px 8px rgba(147, 2, 2, 0.2);
+}
+.rounded {
+  border-radius: 200px;
+}
+.padding-lg {
+  padding: 250px;
+}
+.bg-primary {
+  background-color: #007bff;
+}
+.text-white {
+  color: white;
+}
