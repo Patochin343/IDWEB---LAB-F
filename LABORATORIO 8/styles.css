@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 3em;
+    font-family: "old english text mt","Goudy old style", serif;
+    float: left;
+    line-height: 0.5;
+    margin-right: 8px;
+    color: darkred
+}
+
+::selection {
+    background: yellow;
+    color: red;
+}
+
+.servicios{
+    background: yellow;
+    color: red;
+}
+
+/* flecha antes del titulo */
+.servicios::before {
+    content: "---> ";
+    color: blue;
+}
+
+/* flecha despues del titulo */
+.servicios::after {
+    content: " <---";
+    color: blue;
+}
