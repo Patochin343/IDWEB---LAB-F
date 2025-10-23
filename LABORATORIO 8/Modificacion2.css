@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+a:link {
+    color: green;
+    background-color: #e8f5e9; 
+}
+
+
+a:visited {
+    color: purple;
+    background-color: #f3e5f5; 
+}
+
+
+a:hover {
+    color: red;
+    background-color: #ffebee; 
+}
+
+
+a:active {
+    color: orange;
+    background-color: #fff3e0; 
+}
