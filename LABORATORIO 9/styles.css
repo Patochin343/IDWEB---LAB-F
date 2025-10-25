@@ -1,0 +1,42 @@
+/* Para  boxmodel.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-tarjetas {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta {
+    width: 300px;
+    margin: 15px; 
+    border: 2px solid #3498db; 
+    border-radius: 6px;
+    padding: 20px; 
+    background-color: #ecf0f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; 
+}
+
+.tarjeta h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.tarjeta p {
+    color: #34495e;
+    line-height: 1.6;
+}
