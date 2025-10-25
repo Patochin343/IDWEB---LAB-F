@@ -9,7 +9,7 @@ h1 {
 }
 
 ol {
-    list-style-type: none; /* Quitamos los números por defecto */
+    list-style-type: none; 
     padding: 0;
     max-width: 500px;
     margin: 20px auto;
@@ -18,19 +18,19 @@ ol {
 li {
     padding: 12px 15px;
     border: 1px solid #ddd;
-    margin-bottom: -1px; /* Para que los bordes se superpongan */
+    margin-bottom: -1px; 
 }
 
-/* 1. Alterna los colores de las filas pares con impares, usando gris */
+
 li:nth-child(odd) {
-    background-color: #f9f9f9; /* Gris muy claro para impares */
+    background-color: #f9f9f9; 
 }
 
 li:nth-child(even) {
-    background-color: #eeeeee; /* Gris un poco más oscuro para pares */
+    background-color: #eeeeee; 
 }
 
-/* 2. Agrega los caracteres ==> al inicio de cada tarea */
+
 li::before {
     content: "==> ";
     font-weight: bold;
@@ -38,16 +38,16 @@ li::before {
     margin-right: 10px;
 }
 
-/* 3. Al pasar el mouse, cambia el puntero y el fondo */
+
 li:hover {
     cursor: pointer;
-    background-color: #dcdcdc; /* Gris claro al pasar el mouse */
+    background-color: #dcdcdc; 
 }
 
-/* 4. Muestra ✔ al final de una tarea marcada como "hecha" */
+
 .hecha::after {
     content: " ✔";
     color: green;
     font-weight: bold;
-    float: right; /* Alinea el check a la derecha */
+    float: right; 
 }
