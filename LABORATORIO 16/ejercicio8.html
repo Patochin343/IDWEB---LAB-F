@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <button id="btn8">Crear Tabla</button>
+<div id="div8"></div>
+
+<script>
+    const datos8 = [{n:"A", p:10}, {n:"B", p:20}];
+    document.getElementById("btn8").addEventListener("click", () => {
+        let t = "<table border='1'>";
+        datos8.forEach(d => t += `<tr><td>${d.n}</td><td>${d.p}</td></tr>`);
+        document.getElementById("div8").innerHTML = t + "</table>";
+    });
+</script>
+</body>
+</html>

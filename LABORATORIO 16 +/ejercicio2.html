@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2: Formulario</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            padding: 20px; 
+        }
+        .container { 
+            max-width: 400px; 
+            margin: 0 auto; 
+            border: 1px solid #ccc; 
+            padding: 20px; border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        }
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            box-sizing: border-box; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        button { 
+            width: 100%; 
+            padding: 10px; 
+            background: blue; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        }
+        
+        .error-input { 
+            border: 2px solid red; 
+            background-color: #ffe6e6; 
+        }
+        .msg { 
+            color: red; 
+            font-size: 0.8rem; 
+            display: none; 
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Contacto</h3>
+        <form id="miFormulario">
+            <input type="text" id="nombre" placeholder="Tu Nombre">
+            
+            <input type="text" id="email" placeholder="Tu Email">
+            
+            <div id="mensaje-error" class="msg">Por favor corrige los errores.</div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('miFormulario');
+        const nombreInput = document.getElementById('nombre');
+        const emailInput = document.getElementById('email');
+        const msgError = document.getElementById('mensaje-error');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evitar envío real
+            
+            let hayError = false;
+            
+            // Limpiar estilos previos
+            nombreInput.classList.remove('error-input');
+            emailInput.classList.remove('error-input');
+            msgError.style.display = 'none';
+
+            // Validar Nombre vacío
+            if (nombreInput.value.trim() === "") {
+                nombreInput.classList.add('error-input');
+                hayError = true;
+            }
+
+            // Validar Email (vacío o sin @)
+            if (emailInput.value.trim() === "" || !emailInput.value.includes('@')) {
+                emailInput.classList.add('error-input');
+                hayError = true;
+            }
+
+            if (hayError) {
+                msgError.style.display = 'block';
+                msgError.innerText = "Campos vacíos o email inválido (falta @)";
+            } else {
+                alert("Formulario enviado correctamente");
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <div id="info15"></div>
+<script>
+    const u = { user: "Admin", id: 1 };
+    localStorage.setItem("sesion", JSON.stringify(u));
+    
+    const rec = JSON.parse(localStorage.getItem("sesion"));
+    document.getElementById("info15").innerText = rec.user;
+</script>
+</body>
+</html>

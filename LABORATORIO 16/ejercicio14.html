@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <ul id="ul14"></ul>
+<script>
+    const prods = [{n:"P1"}, {n:"P2"}];
+    const jsonP = JSON.stringify(prods);
+    const recover = JSON.parse(jsonP);
+    const ul14 = document.getElementById("ul14");
+    
+    recover.forEach(r => {
+        const li = document.createElement("li");
+        li.innerText = r.n;
+        ul14.appendChild(li);
+    });
+</script>
+</body>
+</html>

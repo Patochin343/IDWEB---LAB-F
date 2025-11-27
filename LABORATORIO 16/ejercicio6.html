@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <style>.err { color: red; display:block; }</style>
+<div id="form6">
+    <input id="nom6" placeholder="Nombre">
+    <input id="mail6" placeholder="Correo">
+    <button id="val6">Validar</button>
+</div>
+
+<script>
+    document.getElementById("val6").addEventListener("click", () => {
+        const n = document.getElementById("nom6");
+        const m = document.getElementById("mail6");
+        const box = document.getElementById("form6");
+        
+        box.querySelectorAll(".err").forEach(e => e.remove());
+        
+        if(!n.value) {
+            let s = document.createElement("span");
+            s.innerText = "Falta nombre"; s.className = "err";
+            box.insertBefore(s, m);
+        }
+        if(!m.value) {
+            let s = document.createElement("span");
+            s.innerText = "Falta correo"; s.className = "err";
+            box.appendChild(s);
+        }
+    });
+</script>
+</body>
+</html>

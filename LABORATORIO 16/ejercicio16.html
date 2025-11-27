@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+    <div id="div16"></div>
+<script>
+    const jLibros = '[{"t":"Libro A","a":"Autor 1"},{"t":"Libro B","a":"Autor 2"}]';
+    const arrL = JSON.parse(jLibros);
+    let h = "<table border='1'>";
+    arrL.forEach(x => h += `<tr><td>${x.t}</td><td>${x.a}</td></tr>`);
+    document.getElementById("div16").innerHTML = h + "</table>";
+</script>
+</body>
+</html>

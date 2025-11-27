@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1: Color de Fondo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s ease; 
+        }
+        #btn-color {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+      
+        #btn-color:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn-color">Cambiar Color</button>
+
+    <script>
+        const btn = document.getElementById('btn-color');
+
+        btn.addEventListener('click', () => {
+           
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <div>
+    <img src="img1_s.jpg" data-full="img1_b.jpg" class="mini" style="width:50px; cursor:pointer;">
+    <img src="img2_s.jpg" data-full="img2_b.jpg" class="mini" style="width:50px; cursor:pointer;">
+</div>
+<img id="visor7" src="" style="width:200px; display:block;">
+
+<script>
+    const imgs = document.querySelectorAll(".mini");
+    const visor = document.getElementById("visor7");
+    imgs.forEach(i => {
+        i.addEventListener("click", () => {
+            visor.src = i.getAttribute("data-full");
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <ul id="lista9">
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+</ul>
+
+<script>
+    document.getElementById("lista9").addEventListener("click", (e) => {
+        if(e.target.tagName === "LI") e.target.remove();
+    });
+</script>
+</body>
+</html>

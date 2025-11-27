@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5: Contador</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .contador-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        #valor {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            display: block;
+            color: #333; 
+        }
+
+        .negativo { color: red !important; }
+
+        button {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            background-color: #007BFF;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover { background-color: #0056b3; }
+        #btn-restar { background-color: #dc3545; }
+        #btn-restar:hover { background-color: #a71d2a; }
+
+    </style>
+</head>
+<body>
+
+    <div class="contador-container">
+        <h2>Contador</h2>
+        <span id="valor">0</span>
+        <div>
+            <button id="btn-restar">−</button>
+            <button id="btn-sumar">+</button>
+        </div>
+    </div>
+
+    <script>
+        let cuenta = 0;
+        const display = document.getElementById('valor');
+
+        function actualizarDisplay() {
+            display.innerText = cuenta;
+
+            if (cuenta < 0) {
+                display.classList.add('negativo');
+            } else {
+                display.classList.remove('negativo');
+            }
+        }
+
+        document.getElementById('btn-sumar').addEventListener('click', () => {
+            cuenta++;
+            actualizarDisplay();
+        });
+
+        document.getElementById('btn-restar').addEventListener('click', () => {
+            cuenta--;
+            actualizarDisplay();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <p id="txt2">Texto original</p>
+<button id="btn2">Alternar</button>
+
+<script>
+    document.getElementById("btn2").addEventListener("click", () => {
+        const p = document.getElementById("txt2");
+        if (p.innerText === "Texto original") {
+            p.innerText = "Texto cambiado";
+        } else {
+            p.innerText = "Texto original";
+        }
+    });
+</script>
+</body>
+</html>

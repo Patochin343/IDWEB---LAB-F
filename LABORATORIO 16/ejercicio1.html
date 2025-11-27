@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <p id="txt1">Texto original</p>
+<button id="btn1">Cambiar Texto</button>
+
+<script>
+    document.getElementById("btn1").addEventListener("click", () => {
+        document.getElementById("txt1").innerText = "Texto cambiado";
+    });
+</script>
+</body>
+</html>

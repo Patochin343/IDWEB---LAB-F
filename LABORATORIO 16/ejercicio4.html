@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <button id="resta4">−</button>
+<span id="cont4">0</span>
+<button id="suma4">+</button>
+
+<script>
+    let c = 0;
+    const s = document.getElementById("cont4");
+    document.getElementById("suma4").addEventListener("click", () => { c++; s.innerText = c; });
+    document.getElementById("resta4").addEventListener("click", () => {
+        if(c > 0) { c--; s.innerText = c; } else { alert("No baja de 0"); }
+    });
+</script>
+</body>
+</html>

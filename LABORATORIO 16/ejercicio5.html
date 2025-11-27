@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <input id="in5" type="text">
+<button id="add5">Agregar</button>
+<button id="del5">Borrar Último</button>
+<ul id="lista5"></ul>
+
+<script>
+    const ul = document.getElementById("lista5");
+    const inp = document.getElementById("in5");
+    
+    document.getElementById("add5").addEventListener("click", () => {
+        if(inp.value) {
+            const li = document.createElement("li");
+            li.innerText = inp.value;
+            ul.appendChild(li);
+            inp.value = "";
+        }
+    });
+    
+    document.getElementById("del5").addEventListener("click", () => {
+        if(ul.lastElementChild) ul.removeChild(ul.lastElementChild);
+    });
+</script>
+</body>
+</html>

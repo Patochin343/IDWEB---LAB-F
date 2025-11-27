@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <input id="c_nom" placeholder="Nombre">
+<input id="c_edad" placeholder="Edad">
+<button id="c_add">Añadir</button>
+<table id="c_tab" border="1"><tbody></tbody></table>
+
+<script>
+    const bodyTab = document.querySelector("#c_tab tbody");
+    document.getElementById("c_add").addEventListener("click", () => {
+        const n = document.getElementById("c_nom").value;
+        const e = document.getElementById("c_edad").value;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${n}</td><td>${e}</td><td><button class='d'>X</button></td>`;
+        bodyTab.appendChild(tr);
+    });
+    bodyTab.addEventListener("click", e => {
+        if(e.target.className === 'd') e.target.closest("tr").remove();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20</title>
+</head>
+<body>
+    <div id="view20"></div>
+<input id="pn"><input id="pa"><button id="bsave">Guardar</button>
+
+<script>
+    function load() {
+        const d = localStorage.getItem("perfil");
+        if(d) document.getElementById("view20").innerText = d;
+    }
+    document.getElementById("bsave").addEventListener("click", () => {
+        const n = document.getElementById("pn").value;
+        const a = document.getElementById("pa").value;
+        const obj = { nom: n, pais: a };
+        localStorage.setItem("perfil", JSON.stringify(obj));
+        load();
+    });
+    load();
+</script>
+</body>
+</html>

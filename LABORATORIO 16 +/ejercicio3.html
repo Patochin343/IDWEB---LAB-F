@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3: Dropdown</title>
+    <style>
+        body { font-family: sans-serif; padding: 50px; }
+        
+        /* Contenedor relativo para que el menú se posicione respecto a él */
+        .dropdown {
+            position: relative; 
+            display: inline-block;
+        }
+
+        .btn-menu {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* El menú oculto por defecto */
+        .dropdown-content {
+            display: none;
+            position: absolute; /* Clave del ejercicio */
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%; /* Justo debajo del botón */
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        /* Clase para mostrar */
+        .show { display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button id="btnDropdown" class="btn-menu">Menú ▼</button>
+        <div id="miDropdown" class="dropdown-content">
+            <a href="#">Opción 1</a>
+            <a href="#">Opción 2</a>
+            <a href="#">Opción 3</a>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btnDropdown');
+        const menu = document.getElementById('miDropdown');
+
+        // 1. Abrir/Cerrar al click del botón
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que el click llegue a window inmediatamente
+            menu.classList.toggle('show');
+        });
+
+        // 2. Cerrar al hacer click fuera
+        window.addEventListener('click', (e) => {
+            // Si el click NO fue en el botón Y el menú está abierto
+            if (!e.target.matches('.btn-menu')) {
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
