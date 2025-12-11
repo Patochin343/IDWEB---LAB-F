@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Pokémon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input y botón */
+        input {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #365db8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #232d9f;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Tarjeta Pokémon */
+        .card {
+            background: white;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 120px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Buscar Pokémon</h2>
+
+    <input type="text" id="pokemonInput" placeholder="Nombre o ID del Pokémon">
+    <button id="buscarBtn">Buscar</button>
+
+    <div id="resultado"></div>
+
+    <script src="../js/ejercicio09.js"></script>
+</body>
+</html>

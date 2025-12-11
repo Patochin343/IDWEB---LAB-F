@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Go</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-left: 10px;
+            background: #2d8091;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #1d1680;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 260px;
+            text-align: center;
+        }
+
+        #resultado img {
+            width: 120px;
+        }
+
+        #resultado p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Busca un Pokémon</h2>
+
+    <label for="idPokemon">ID:</label>
+    <input type="text" id="idPokemon">
+
+    <button id="btnBuscar">Buscar</button>
+
+    <div id="resultado"></div>
+
+    <script src="../js/ejercicio07.js"></script>
+</body>
+</html>

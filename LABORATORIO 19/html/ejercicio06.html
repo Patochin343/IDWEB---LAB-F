@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemón Aleatorio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #d134d1;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #9c0bb2;
+        }
+
+        #resultado {
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Pokemón Aleatorio</h2>
+        <button id="btnPokemonAleatorio">Mostrar Pokémon</button>
+        <p>Revisa la consola</p>
+        <p id="resultado"></p>
+    </div>
+
+    <script src="../js/ejercicio06.js"></script>
+</body>
+</html>

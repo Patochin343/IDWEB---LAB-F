@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros 20 Pokémon</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #da39da;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #ac0ec4;
+        }
+        ul {
+            text-align: left;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Primeros 20 Pokémon</h2>
+        <button id="btnListar">Listar Pokémon</button>
+        <ul id="lista"></ul>
+    </div>
+
+    <script src="../js/ejercicio05.js"></script>
+</body>
+</html>
